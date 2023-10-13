@@ -32,7 +32,15 @@ function makeeOperation(operationCode){
     result.value = res;
 }
 
+/* var arreyButtonsOperation = [operatorPlus, operatorMinus, operatorUmnoz, operatorPecent];
 
+addCommonEventList(i) ;{
+    operatinButtons[i].addEventListener('click', onOperationButtonClick);
+}
+var i;
+for(i=0; i < arreyButtonsOperation.length; i++){
+    addCommonEventList(i);
+} */
 
 operatorPlus.addEventListener('click', onOperationButtonClick);
 operatorMinus.addEventListener('click', onOperationButtonClick);
