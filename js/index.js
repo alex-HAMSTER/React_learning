@@ -36,3 +36,14 @@ for(var i = 0; i < operationButtons.length; i++){
     var button = operationButtons[i];
     button.addEventListener('click', onOperationButtonClick)
 }
+
+
+
+const btnPrev = document.getElementById('btnPrev');
+const btnNext = document.getElementById('btnNext');
+
+const sliderImg = document.getElementById('slider_img');
+
+btnNext.addEventListener('click', ()=> {
+    sliderImg.src = 'img/slider_2.png'
+})
