@@ -56,8 +56,9 @@ var imgSrc=['img/slider_1.png',
 
 var counter = 0;
 
-btnNext.addEventListener('click',()=>{
+btnNext.addEventListener('click', ()=>{
     counter++;
+
     if(counter < imgSrc.length){
         sliderImg.src = imgSrc[counter]
     }else{
@@ -66,9 +67,38 @@ btnNext.addEventListener('click',()=>{
     }
     
     console.log(counter);
-    imgSrc[counter]
 })
 
 
+counter = imgSrc.length;
 
+btnPrev.addEventListener('click',()=>{
+    counter = counter-1;
+
+    if(counter > -1){
+        sliderImg.src = imgSrc[counter]
+    }else{
+        counter = imgSrc.length;
+        counter = counter-1;
+        sliderImg.src = imgSrc[counter]
+    }
+    
+    console.log(counter);
+})
+
+
+const btnDot = document.getElementsByClassName('btn_dot');
+
+function butonClick(j){
+    var clickedEl = j.currentTarget;
+    counter = clickedEl.innerHTML;
+    counter = counter-1;
+    sliderImg.src = imgSrc[counter]
+    console.log(counter)
+}
+
+for(var i = 0; i < btnDot.length; i++){
+    var button = btnDot[i];
+    button.addEventListener('click', butonClick)
+}
 
