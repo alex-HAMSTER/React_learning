@@ -44,6 +44,31 @@ const btnNext = document.getElementById('btnNext');
 
 const sliderImg = document.getElementById('slider_img');
 
-btnNext.addEventListener('click', ()=> {
+/* btnNext.addEventListener('click', ()=> {
     sliderImg.src = 'img/slider_2.png'
+}) */
+
+
+var imgSrc=['img/slider_1.png',
+            'img/slider_2.png',
+            'img/slider_3.png',
+            'img/slider_4.png'];
+
+var counter = 0;
+
+btnNext.addEventListener('click',()=>{
+    counter++;
+    if(counter < imgSrc.length){
+        sliderImg.src = imgSrc[counter]
+    }else{
+        counter = 0;
+        sliderImg.src = imgSrc[counter]
+    }
+    
+    console.log(counter);
+    imgSrc[counter]
 })
+
+
+
+
