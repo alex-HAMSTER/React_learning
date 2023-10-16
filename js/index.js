@@ -73,13 +73,13 @@ btnNext.addEventListener('click', ()=>{
 counter = imgSrc.length;
 
 btnPrev.addEventListener('click',()=>{
-    counter = counter-1;
+    counter--;
 
     if(counter > -1){
         sliderImg.src = imgSrc[counter]
     }else{
         counter = imgSrc.length;
-        counter = counter-1;
+        counter--;
         sliderImg.src = imgSrc[counter]
     }
     
@@ -92,7 +92,7 @@ const btnDot = document.getElementsByClassName('btn_dot');
 function butonClick(j){
     var clickedEl = j.currentTarget;
     counter = clickedEl.innerHTML;
-    counter = counter-1;
+    counter--;
     sliderImg.src = imgSrc[counter]
     console.log(counter)
 }
